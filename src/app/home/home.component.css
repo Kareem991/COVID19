@@ -1,0 +1,15 @@
+.custom {
+  font-size: 26px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1A3503;
+  color: #77C02F;
+  opacity: 0.75;
+  padding: 10px;
+}
+.custom:hover {
+  opacity: 1;
+}
+a{
+  cursor: pointer;
+}
