@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   sorted = [];
-  constructor(public api: ApiService) { }
+  constructor(public api: ApiService, public router: Router) { }
 
   ngOnInit() {
   }
@@ -43,5 +44,8 @@ stringtoNum(digit: string) {
   const int = parseFloat(digit.replace(/,/g, ''));
   return int;
 
+}
+onClick(country: string) {
+this.router.navigateByUrl('/#' + country);
 }
 }

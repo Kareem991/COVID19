@@ -1,7 +1,11 @@
 <ngx-loading [show]="api.loading" [config]="{ backdropBorderRadius: '3px' }"></ngx-loading>
-<div class="container mt-5" style="text-align: center;" *ngIf="country">
-  <div class="row mb-3">
-    <div class="col-md-6 offset-md-3">
+<div class="container" style="text-align: center;" *ngIf="country">
+  <div class="row">
+    <div class="col-md-2">
+      <button routerLink="/" style="margin: 20px 2px 0px 0px; background-color: transparent;"  class="custom"><i class="fas fa-arrow-left fa-2x"></i>
+      </button>
+    </div>
+    <div class="col-md-2 offset-md-3 mt-5">
       <h1>{{country['country_name']}}</h1>
     </div>
   </div>

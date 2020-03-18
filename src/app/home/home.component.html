@@ -37,9 +37,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr [routerLink] = "['/'+item['country_name']]" style="cursor: pointer;" *ngFor="let item of api.sorted; let i = index">
+          <tr *ngFor="let item of api.sorted; let i = index">
             <th>{{i+1}}</th>
-            <th>{{item['country_name']}}</th>
+            <th style="cursor: pointer;" (click) = "onClick(item['country_name'])" >{{item['country_name']}}</th>
             <th>{{item['cases']}}</th>
             <th>{{item['deaths']}}</th>
             <th>{{item['new_cases']}}</th>
