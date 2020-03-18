@@ -46,6 +46,6 @@ stringtoNum(digit: string) {
 
 }
 onClick(country: string) {
-this.router.navigateByUrl('/#' + country);
+this.router.navigateByUrl('/' + country);
 }
 }
