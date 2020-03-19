@@ -25,7 +25,6 @@ getStats() {
     this.sorted = this.data.slice();
     this.retrieved = true;
     this.loading = false;
-    console.log(this.data);
   });
 }
 findCountryByName() {

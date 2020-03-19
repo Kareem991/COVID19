@@ -38,12 +38,12 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of api.sorted; let i = index">
-            <th>{{i+1}}</th>
-            <th style="cursor: pointer;" (click) = "onClick(item['country_name'])" >{{item['country_name']}}</th>
-            <th>{{item['cases']}}</th>
-            <th>{{item['deaths']}}</th>
-            <th>{{item['new_cases']}}</th>
-            <th>{{item['new_deaths']}}</th>
+            <th><a [routerLink]= "['/'+item['country_name']]">{{i+1}}</a></th>
+            <th><a [routerLink]= "['/'+item['country_name']]">{{item['country_name']}}</a></th>
+            <th><a [routerLink]= "['/'+item['country_name']]">{{item['cases']}}</a></th>
+            <th><a [routerLink]= "['/'+item['country_name']]" >{{item['deaths']}}</a></th>
+            <th><a [routerLink]= "['/'+item['country_name']]" >{{item['new_cases']}}</a></th>
+            <th><a [routerLink]= "['/'+item['country_name']]" >{{item['new_deaths']}}</a></th>
           </tr>
         </tbody>
       </table>

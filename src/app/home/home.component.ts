@@ -45,7 +45,4 @@ stringtoNum(digit: string) {
   return int;
 
 }
-onClick(country: string) {
-this.router.navigateByUrl('/' + country);
-}
 }
