@@ -25,7 +25,7 @@ if (choice === 'Alphabet') {
     this.api.sorted.sort( (A, B) => A.country_name > B.country_name ? 1 : -1 );
   }
 if (choice === 'Cases') {
-    this.api.sorted.sort( (A, B) => this.stringtoNum(B.cases)- this.stringtoNum(A.cases) );
+    this.api.sorted.sort( (A, B) => this.stringtoNum(B.cases) - this.stringtoNum(A.cases) );
   }
 if (choice === 'Deaths') {
     this.api.sorted.sort( (A, B) => this.stringtoNum(B.deaths) - this.stringtoNum(A.deaths));

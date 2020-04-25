@@ -23,6 +23,7 @@ getStats() {
     // tslint:disable-next-line: no-string-literal
     this.data = url['countries_stat'];
     this.sorted = this.data.slice();
+    this.sorted.sort( (A, B) => this.stringtoNum(B.cases) - this.stringtoNum(A.cases) );
     this.retrieved = true;
     this.loading = false;
   });
@@ -36,7 +37,11 @@ findCountryByName() {
   };
   return this.http.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_country.php', httpOptions);
 }
+stringtoNum(digit: string) {
+  const int = parseFloat(digit.replace(/,/g, ''));
+  return int;
 
+}
 }
 
 
